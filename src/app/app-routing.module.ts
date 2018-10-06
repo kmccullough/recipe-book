@@ -1,11 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { RecipesRoutedComponent } from '@component/routed/recipes/recipes.component';
+import { MenusRoutedComponent } from '@component/routed/menus/menus.component';
+import { MealsRoutedComponent } from '@component/routed/meals/meals.component';
+import { PantryRoutedComponent } from '@component/routed/pantry/pantry.component';
+import { GroceriesRoutedComponent } from '@component/routed/groceries/groceries.component';
+import { ComponentModule } from '@component/component.module';
 
-import { RecipesRoutedComponent } from './component/routed/recipes/recipes.component';
-import { MenusRoutedComponent } from './component/routed/menus/menus.component';
-import { MealsRoutedComponent } from './component/routed/meals/meals.component';
-import { PantryRoutedComponent } from './component/routed/pantry/pantry.component';
-import { GroceriesRoutedComponent } from './component/routed/groceries/groceries.component';
+const components = [
+  RecipesRoutedComponent,
+  MealsRoutedComponent,
+  PantryRoutedComponent,
+  GroceriesRoutedComponent,
+  MenusRoutedComponent,
+];
 
 const routes: Routes = [
   { path: '', redirectTo: '/recipes', pathMatch: 'full' },
@@ -17,7 +25,13 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  declarations: [
+    ...components
+  ],
+  imports: [
+    RouterModule.forRoot(routes),
+    ComponentModule,
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

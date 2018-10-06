@@ -1,0 +1,21 @@
+$maxSize: 200px;
+$maxWidth: $maxSize;
+$maxHeight: $maxSize;
+
+.grid {
+
+  display: grid;
+
+  &__item {
+    display: inline-block;
+  }
+}
+
+img {
+  max-width: $maxWidth;
+  max-height: $maxHeight;
+}
+
+.name {
+  display: block;
+}

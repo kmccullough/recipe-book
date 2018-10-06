@@ -1,0 +1,12 @@
+<table>
+  <thead>
+    <th>Name</th>
+    <th>Rating</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of items">
+      <td [textContent]="item.values?.name"></td>
+      <td [textContent]="item.values?.rating"></td>
+    </tr>
+  </tbody>
+</table>

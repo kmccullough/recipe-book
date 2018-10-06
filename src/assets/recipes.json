@@ -1,6 +1,7 @@
 {
   "banana-banana-bread": {
     "name": "Banana Banana Bread",
+    "image": "assets/banana-banana-bread.jpg",
     "summary": {
       "time": {
         "prep": "15:00",
@@ -51,6 +52,7 @@
   },
   "beverage-milk": {
     "name": "Milk",
+    "image": "assets/beverage-milk.jpg",
     "ingredients": [
       {
         "amount": [ "8 oz" ]

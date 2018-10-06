@@ -1,0 +1,9 @@
+<rb-collection view="grid">
+  <rb-collection-table columns="name,rating"></rb-collection-table>
+  <rb-item *ngFor="let recipe of recipes"
+           [values]="{
+      name:  recipe.name,
+      image: recipe.image
+    }">
+  </rb-item>
+</rb-collection>
